@@ -1,5 +1,6 @@
 package com.dustinmcallister.game.state;
 
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.dustinmcallister.game.FlappyBirdClone;
@@ -19,11 +20,17 @@ public class MenuState extends State {
 
     @Override
     public void handleInput() {
+        if(Gdx.input.justTouched()) {
+            gsm.set(new PlayState(gsm));
+            dispose(); // disposing after using frees up memory and prevents memory leaks.
+        }
 
     }
 
     @Override
     public void update(float dt) {
+        handleInput();
+
 
     }
 
