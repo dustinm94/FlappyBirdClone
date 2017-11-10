@@ -15,7 +15,7 @@ public class FlappyBirdClone extends ApplicationAdapter {
 	public static final String TITLE = "FlappyBirdClone";
 	private GameStateManager gsm;
 	private SpriteBatch batch;
-	Texture img;
+	//Texture img;
 	
 	@Override
 	public void create () {
@@ -35,6 +35,6 @@ public class FlappyBirdClone extends ApplicationAdapter {
 	@Override
 	public void dispose () {
 		batch.dispose();
-		img.dispose();
+		//img.dispose();
 	}
 }

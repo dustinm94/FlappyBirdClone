@@ -22,7 +22,6 @@ public class MenuState extends State {
     public void handleInput() {
         if(Gdx.input.justTouched()) {
             gsm.set(new PlayState(gsm));
-            dispose(); // disposing after using frees up memory and prevents memory leaks.
         }
 
     }
@@ -47,5 +46,6 @@ public class MenuState extends State {
     public void dispose() {
         background.dispose();
         playBtn.dispose();
+        System.out.println("Menu State Disposal");
     }
 }
